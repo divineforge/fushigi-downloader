@@ -25,9 +25,11 @@ The manga, chapter and page argument can be found in the site url with the argum
 Download the second chapter of raw doraemon scans
 
 the URL is:
+
  http://doraemon.mangawiki.org/read-manga/index.php?manga=Doraemon-Manga-Raw&chapter=Doraemon_Vol_02_RAW&page=1
 
 The command line is:
+
  python fushigi.py -m Doraemon-Manga-Raw -c Doraemon_Vol_02_RAW -c Doraemon_Vol_02_RAW -s 1 -e 192
 
 
