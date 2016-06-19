@@ -3,9 +3,9 @@
 
 import os
 import argparse
-import urllib.request
 import time
 import gzip
+import urllib.request
 from urllib.parse import quote
 from bs4 import BeautifulSoup
 from io import StringIO
@@ -34,13 +34,18 @@ def download_manga(manga, chapter, page_start, page_end, download_dir='./'):
                                                                               chapter,
                                                                               page)
         print(url)
+
+        #get remote page
         soup = get_page_soup(url)
         img_tag=soup.find('img', {'class':"picture"})
         img_src = urllib.parse.quote(img_tag['src'])
         image_url = '{0}{1}{2}'.format(URL_BASE, 'read-manga/', img_src)
-        print(image_url)
 
-        filename = '{0}{1}.jpg'.format(download_dir, page)
+        #set image local filename
+        #pad the filename with as much zeros as page_end len
+        max_page_len = len(str(page_end))
+        filename_format = '{0}{1:0'+str(max_page_len)+'}.jpg'
+        filename = filename_format.format(download_dir, page)
 
         while True:
             time.sleep(2)
