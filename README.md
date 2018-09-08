@@ -30,9 +30,9 @@ the URL is:
  http://doraemon.mangawiki.org/read-manga/index.php?manga=Doraemon-Manga-Raw&chapter=Doraemon_Vol_02_RAW&page=1
 
 The command line is:
-
- python fushigi.py -m Doraemon-Manga-Raw -c Doraemon_Vol_02_RAW -c Doraemon_Vol_02_RAW -s 1 -e 192
-
+```sh
+python fushigi.py -m Doraemon-Manga-Raw -c Doraemon_Vol_02_RAW -s 1 -e 192
+```
 
 # Tips
 
