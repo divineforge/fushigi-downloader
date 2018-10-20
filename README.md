@@ -43,3 +43,47 @@ The scans on mangawiki are good, but a little skew.
 As a post process after download I recommend to use image magic deskew function
 
  for i in *.jpg; do echo $i; convert -deskew 40% -set option:deskew:auto-crop 10 $i deskew_$i;done
+
+
+___
+
+
+## Python3 Virtualenv Setup
+
+Added Guide from here
+https://gist.githubusercontent.com/pandafulmanda/730a9355e088a9970b18275cb9eadef3/raw/3013691801f5707624e7ec84bfdd6cfc06037c25/Python3%2520Virtualenv%2520Setup.md
+
+##### Requirements
+* Python 3
+* Pip 3
+
+```bash
+$ brew install python3
+```
+
+Pip3 is installed with Python3
+
+##### Installation
+To install virtualenv via pip run:
+```bash
+$ pip3 install virtualenv
+```
+
+##### Usage
+Creation of virtualenv:
+```bash
+$ virtualenv -p python3 <desired-path>
+```
+
+Activate the virtualenv:
+```bash
+$ source <desired-path>/bin/activate
+```
+
+Deactivate the virtualenv:
+```bash
+$ deactivate
+```
+
+
+[About Virtualenv](https://virtualenv.pypa.io/en/stable/)
